@@ -18,7 +18,7 @@ router.post('/signup', (req, res) => {
 // LOGIN
 router.post('/login', (req, res) => {
   console.log('User Logged In...');
-  res.status(200).send('You Logged In!');
+  res.status(200).redirect('/app');
 });
 
 module.exports = router;

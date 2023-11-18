@@ -21,6 +21,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
+// APP
+app.get('/app', (req, res) => {
+  console.log('Inside the app');
+  res.status(200).sendFile(path.join(__dirname, '../client/app.html'));
+});
+
 // 404 HANDLER
 app.use('*', (req, res) => {
   console.log('404 Route Handler');
