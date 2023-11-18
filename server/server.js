@@ -2,10 +2,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const app = express();
+require('dotenv').config();
+const mongoose = require('mongoose');
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+
+// CONNECT DATABASE
+const MONGO_URI = process.env.MONGO_URI;
+mongoose.connect(MONGO_URI);
 
 // SERVE STATIC FILES
 app.use(express.static(path.join(__dirname, '../client')));
