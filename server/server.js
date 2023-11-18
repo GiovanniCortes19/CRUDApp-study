@@ -23,6 +23,12 @@ app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/signup.html'));
 });
 
+// 404 HANDLER
+app.use('*', (req, res) => {
+  console.log('404 Route Handler');
+  res.status(404).send('This Page Does Not Exist...');
+});
+
 // CONNECT TO SERVER
 app.listen(3000, () => {
   console.log('listening on PORT 3000...');
