@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // LOG IN FORM
   const logIn = document.createElement('form');
-  logIn.setAttribute('action', '/login');
+  logIn.setAttribute('action', '/auth/login');
   logIn.setAttribute('method', 'post');
   logIn.style.border = 'solid 1px black';
   logIn.style.borderRadius = '10px';
@@ -42,4 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // APPEND LOGIN INTO BODY
   logIn.append(usernameInput, passwordInput, submitButton);
   body.appendChild(logIn);
+
+  // SIGNUP LINK
+  const signup = document.createElement('a');
+  signup.innerText = 'Sign Up';
+  signup.setAttribute('href', '/auth/signup');
+
+  body.appendChild(signup);
 });

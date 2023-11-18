@@ -11,16 +11,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client')));
 
 // ROUTES
+const authRoute = require('./routes/authRoute');
+
+app.use('/auth', authRoute);
+
 // HOME
 app.get('/', (req, res) => {
   console.log('Got the home page');
   res.sendFile(path.join(__dirname, '../client/index.html'));
-});
-
-// SIGNUP
-app.get('/signup', (req, res) => {
-  console.log('Serving the Sign Up page...');
-  res.sendFile(path.join(__dirname, '../client/signup.html'));
 });
 
 // 404 HANDLER
