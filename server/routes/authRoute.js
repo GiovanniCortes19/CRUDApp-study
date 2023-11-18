@@ -12,7 +12,7 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', (req, res) => {
   console.log('Should create a user...');
-  res.status(200).send('');
+  res.status(200).redirect('/app');
 });
 
 // LOGIN

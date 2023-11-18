@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   title.style.textAlign = 'center';
 
   const body = document.querySelector('body');
+  body.style.display = 'flex';
+  body.style.flexDirection = 'column';
+  body.style.gap = '50px';
+  body.style.alignItems = 'center';
   // INSERT TITLE HEADER INSIDE THE BODY
   body.appendChild(title);
 
@@ -16,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logIn.setAttribute('method', 'post');
   logIn.style.border = 'solid 1px black';
   logIn.style.borderRadius = '10px';
-  logIn.style.padding = '10px';
+  logIn.style.padding = '20px';
   logIn.style.width = '40vw';
   logIn.style.display = 'flex';
   logIn.style.flexDirection = 'column';
